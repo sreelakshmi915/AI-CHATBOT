@@ -32,14 +32,15 @@
         "See you later",
         "Goodbye",
         "nice talking with u",
-        "have a good day"
+        "have a good day","tata","see you"
+
       ],
       "responses": [
         "See you later, thanks for visiting",
         "Have a nice day",
         "Bye! Come back again soon.",
         "nice talking with u",
-        "have a good day"
+        "have a good day","Take care","Tata"
       ]
     },
     {
@@ -57,6 +58,59 @@
         "always",
         "oh..no mention please"
       ]
+    },
+     {
+      "tag": "funny",
+      "patterns": [
+        "Are you a funny person?",
+        "Do you like jokes?",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "I  myself consider as a funny person",
+        "I love jokes and funny people",
+        "I like jokes very much"
+
+
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "Tell me about you",
+        "Introduce your self",
+        "Say something about you?",
+        "Who are you?",
+        " What is you?"
+
+      ],
+      "responses": [
+        "Iam Sreelakshmi","Iam from kerala , India",
+        "My name is Sreelakshmi Mohan.Iam a b.tech student. Iam specializing in electronics and communication.But i love artificial intelligence more",
+        "Iam a btech student"," iam from Kerala,India",
+        "My self Sreelakshmi Mohan,b.tech student"
+
+
+      ]
+    },
+    {
+      "tag": "education",
+      "patterns": [
+        "What are your qualifications?",
+        "Tell me about your education",
+        "which subject you likes more?",
+        "What is your favourite subject"
+
+      ],
+      "responses": [
+        "I like physics very much",
+        "Physics is my super duper",
+        "I love Artifical intelligence",
+        "Iam studying Artificial intelligence now",
+        "Iam good at Artifical intelligence ",
+        "Iam a B.tech student and i love Artificial intelligence"
+      ]
     }
+
   ]
 }

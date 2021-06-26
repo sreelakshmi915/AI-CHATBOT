@@ -15,7 +15,7 @@ class Neuralnetwork(nn.Module): # creating neural network with 3 layers input hi
         out = self.l2(out)
         out = self.relu(out)
         out = self.l3(out)
-        out = self.reu(out)
+        out = self.relu(out)
         #last we dont want activation fn
         return out
 

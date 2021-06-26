@@ -67,12 +67,12 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 for epoch in range(num_epochs):
     for(words,labels)in train_loader:
         words = words.to(device)
-        labels = labels.to(device)
+        labels = labels.to(dtype=torch.long).to(device)
 
 
 #forward pass
         outputs = model(words)
-        loss = criterion(outputs,labels)
+        loss = criterion(outputs, labels)
         #back propagation and optimizer
         optimizer.zero_grad()
         loss.backward()
@@ -80,6 +80,22 @@ for epoch in range(num_epochs):
     if(epoch+1)%100 ==0:
         print(f'epoch{epoch+1}/{num_epochs}, loss={loss.item():.4f}')
 print(f'final loss , loss ={loss.item():.4f}')
+"""The number of epochs is a hyperparameter that defines the number times that the learning algorithm will work through the entire training dataset. 
+One epoch means that each sample in the training dataset has had an opportunity to update the internal model parameters. 
+An epoch is comprised of one or more batches."""
+
+#to save model
+datas= {
+    "model_state": model.state_dict(),
+    "input_size" :input_size,
+    "output_size":output_size,
+    "hidden_size":hidden_size,
+    "full_words":full_words,
+    "tags":tags
+}
+FILE ="datas.pth"
+torch.save(datas,FILE)
+print(f'training complete,file saved to {FILE}')
 
 
 
